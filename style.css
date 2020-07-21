@@ -1,0 +1,154 @@
+*{
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-image: url("bg6.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.navbar{
+    background: black;
+}
+.headtext{
+    padding-left: 10px;
+}
+.headtext p{
+    font-size: 1em;
+}
+.right{
+    float: right;
+}
+.right a{
+    float: left;
+}
+.nav-link{
+    color:white;
+    font-size: 20px;
+}
+.first .nav-link:hover{
+    border-left: 5px solid white;
+    color:white;
+}
+.column{
+    padding:10px;
+    float:left;
+    height:500px;
+}
+.two{
+    text-align: center;
+    width:50%;
+    border: 2px solid black;
+}
+.container{
+    
+    padding:10px;
+}
+
+
+input[type=text], input[type=password], input[type=NUMBER]{
+    width:80%;
+    padding: 10px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+}
+input[type=text]::placeholder, input[type=password]::placeholder, input[type=NUMBER]::placeholder{
+    text-align: left;
+}
+button{
+    display: inline-block;
+    width:40%;
+    height:50px;
+    background-color: black;
+    color: white;
+}
+button a{
+    text-decoration: none;
+    color:white;
+}
+button a:hover{
+    text-decoration: none;
+    background-color: #ffad33;
+    color:black;
+}
+button:hover{
+    background-color: #ffad33;
+    color:black;
+}
+.footer{
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color:black;
+    color: white;
+    text-align: center;
+    font-size: 12px;
+}
+@media (max-width:1280px){
+    button{
+        margin-bottom: 10px;
+        display: block;
+        width: 100%;
+    }
+    #fast{
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 5px;
+        height:65px;
+    }
+
+    .two{
+        height: 600px;
+    }
+    .twotwo{
+        height: 650px;
+    }
+}
+@media (max-width:1024px){
+    .two{
+        width:50%;
+    }
+    .one, .three{
+        width:25%;
+    }
+    .twotwo{
+        width:50%;
+    }
+    .oneone, .threethree{
+        width:25%;
+    }
+
+}
+@media (max-width:767px){
+    .two{
+        width:65%;
+    }
+    .one, .three{
+        width:17%;
+    }
+    .twotwo{
+        width:65%;
+    }
+    .oneone, .threethree{
+        width:17%;
+    }
+}
+@media (max-width:480px){
+    .two{
+        width:85%;
+    }
+    .one, .three{
+        width:7%;
+    }
+    .twotwo{
+        width:85%;
+    }
+    .oneone, .threethree{
+        width:7%;
+    }
+}
