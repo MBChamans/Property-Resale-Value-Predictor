@@ -2,93 +2,141 @@
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
 }
-body{
-    background-image: url("bg6.jpg");
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
-}
 
 .navbar{
-    background: black;
+    background: #bc986a;
+    /* border-bottom: 5px solid #fbeec1; */
 }
+
 .headtext{
-    padding-left: 10px;
+    padding:0;
+    margin:0;
+    opacity: 0.3;
 }
+
 .headtext p{
     font-size: 1em;
 }
+
 .right{
     float: right;
 }
+
 .right a{
     float: left;
 }
+
 .nav-link{
-    color:white;
+    color: #fbeec1;
     font-size: 20px;
 }
+
 .first .nav-link:hover{
-    border-left: 5px solid white;
-    color:white;
+    border-left: 5px solid #fbeec1;
+    color:#fbeec1;
 }
-.column{
-    padding:10px;
-    float:left;
-    height:500px;
+
+.row{
+    margin:40px;
+} 
+
+.column {
+    float: left;
+    padding: 10px;
+    height: 330px; /* Should be removed. Only for demonstration */
 }
+
+.one{
+    width:62%;  
+}
+
 .two{
-    text-align: center;
-    width:50%;
-    border: 2px solid black;
-}
-.container{
-    
-    padding:10px;
+    margin-left: 15px;
+    width:36%;
+    border: 2px solid #808080;
+    border-radius: 20px;
 }
 
-
-input[type=text], input[type=password], input[type=NUMBER]{
-    width:80%;
+input{
     padding: 10px 20px;
     margin: 8px 0;
     display: inline-block;
-    border: 1px solid #ccc;
+    border: 1px solid #808080;
+    border-radius: 7px;
 }
-input[type=text]::placeholder, input[type=password]::placeholder, input[type=NUMBER]::placeholder{
-    text-align: left;
+
+.firstinput{
+    width:49%;
+    float: left;
 }
-button{
-    display: inline-block;
-    width:40%;
-    height:50px;
-    background-color: black;
-    color: white;
+.secondinput{
+    width:49%;
+    float: right;
 }
-button a{
-    text-decoration: none;
-    color:white;
+
+.propertylist{
+    font-size: 14px;
+    width: 39%;
+    
 }
-button a:hover{
-    text-decoration: none;
-    background-color: #ffad33;
-    color:black;
+
+.floorlist{
+    width:49%;
+    float: left;
 }
+
+.bedroomlist{
+    font-size: 14px;
+    width: 36.5%;
+}
+
+.floorno{
+    width:49%;
+    float: right; 
+}
+
+.cparkingnumber{
+    width:49%;
+    float: left;
+}
+
+.oparkingnumber{
+    width:49%;
+    float: right;
+}
+
+.sub{
+    margin-top: 20px;
+    width:50%;
+    margin-left: 25%;
+    padding: 10px 20px;
+    border-radius: 7px;
+    background-color: white;
+    border: 2px solid #bc986a;
+   
+}
+
 button:hover{
-    background-color: #ffad33;
-    color:black;
+    background-color: #bc986a;
+    color: #fbeec1;
 }
+
+input[type=text]::placeholder, input[type=NUMBER]::placeholder{
+    text-align: left;
+    font-size: 14px;
+}
+
 .footer{
-    position: static;
+    position:static;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:black;
-    color: white;
+    background-color:#bc986a;
+    color: #fbeec1;
     text-align: center;
     font-size: 12px;
 }
-@media (max-width:1280px){
+/* @media (max-width:1280px){
     button{
         margin-bottom: 10px;
         display: block;
@@ -151,4 +199,4 @@ button:hover{
     .oneone, .threethree{
         width:7%;
     }
-}
+} */

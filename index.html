@@ -1,7 +1,7 @@
 <html>
     <head>
-        <title>Mokujit RVP</title>
-        <link rel="icon" href="icon.png">
+        <title>Mokujit Houses</title>
+        <link rel="icon" href="logo.png">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
@@ -10,80 +10,95 @@
         <link rel="stylesheet" href="style.css">
     </head>
      <body>
+
         <div class="first">
             <nav class="navbar navbar-light">
-                <a class="navbar-brand" href="#" style="color: white; font-size: 30px;">MOKUJIT RESALE VALUE PREDICTOR
+                <a class="navbar-brand" href="#" style="color: #fbeec1; font-size: 35px;"><img src="logo.png" width="63" height="63" alt="" loading="lazy" style="margin-left: 10px; margin-right: 20px;">MOKUJIT HOUSES
                 </a>
                 <div class="right">
                     <a class="nav-link" href="about.html">ABOUT</a>
                 </div>
             </nav>
         </div>
+
         <br>
+        <br>
+
         <div class="headtext">
-            <h4> Know the right price of your property</h4>
-            <p> Just let us know a few details first</p>
+            <p style="text-align: center;color:#bc986a;font-size: 60px;position:absolute; top:160;left:65;right: 65;">" Know The Right Price Of Your Property "</p>
         </div>
-        <br>
+
+        <br><br><br>
+
+        <div class="overtext">
+            <p style="text-align: center;font-size: 30px;position: relative;color:#bc986a"> Just Let Us Know A Few Details First</p>
+        </div>
+
+        <br><br>
+
         <div class="row">
-            <div class="column one"></div>
-            <div class="column two"><br>
-            <br>
-            <form action="" method="">
-                <div class="container">
-                    <div><input type="text" placeholder="Enter Locality, Project or Society" name="locality" required></div>
-                    <div><label for="PropertyType">Property Type:</label>
-                    <select id="type" name="PropertyType">
-                        <option value="Apartment">Apartment</option>
-                        <option value="Villa">Villa</option>
-                    </select></div>
-                    <div><input type="text" placeholder="Super Built-Up Area (Sqft)" name="area" required></div>
-                    <div><label for="Bedrooms">No. of Bedrooms:</label>
-                    <select id="bedrooms" name="Bedrooms">
-                        <option value="0">Studio</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
-                        <option value="6">6</option>
-                        <option value="7">7</option>
-                        <option value="8">8</option>
-                        <option value="9">9</option>
-                        <option value="10">10</option>
-                    </select></div>
-                    <span><input type="text" placeholder="Total Floors" name="totalfloors" required>
-                    <input type="text" placeholder="Floor Number" name="floornumber" required></span>
-                    <div><label for="Parking">Parking:</label>
-                        <select id="parkingtype" name="Parking">
-                        <option value="Covered">Covered</option>
-                        <option value="Open">Open</option>
-                        </select></div>
-                    <br>
-                    <div class="buttons">
-                     <button type="submit">Predict Property Price</button>
-                </div>
+            <div class="column one">
+                <form action="" method="">
+
+                    <span><input type="text" placeholder="Enter Locality, Project or Society" name="locality" class ="firstinput" required>
+                        <input type="number" placeholder="Super Built-Up Area (Sqft)" name="locality" class ="secondinput" required>
+                    </span>
+
+                    <span>
+                        <input list="property" name="propertyname" placeholder="Property Type" class="propertylist">
+                            <datalist id="property">
+                                <option value="Apartment">
+                                <option value="Villa">
+                                <option value="Bungalows">
+                            </datalist>                      
+                        &nbsp;&nbsp;&nbsp;&nbsp;                                                       
+                        <span>No. Of Bedrooms :</span>
+                        &nbsp;
+                        <input type="number" placeholder="Number of Bedrooms" name="bedrooms" class ="bedroomlist" required>                           
+                    </span>
+
+                    <span>   
+                        <input type="number" placeholder="Covered Parking" name="cparking" class ="cparkingnumber" required>
+                        <input type="number" placeholder="Open Parking" name="oparking" class ="oparkingnumber" required>      
+                    </span>
+
+                    <span>
+                        <input type="number" placeholder="Total Floors" name="floortotal" class ="floorlist" required>
+                        <input type="number" placeholder="Floor Number" name="floornumber" class ="floorno" required>  
+                    </span>
+
+                    <br><br>
+
+                    <button type="submit" form="form1" value="Submit" class="sub" onclick="myFunction()">Calculate Property Price</button>
+                </form>
             </div>
-        </form>
-    </div>
-</div>
-<br>
-<br>
-<br>
-<div class="footer">
-            <br>
-            <a style="font-size: 20px;"><img src="icon.png" width="20" height="20" alt="" loading="lazy">MOKUJIT RESALE VALUE PREDICTOR</a>
-            <br>
-            <br>
-                <p><i>"Property Wise Be Wise"</i></p>
-            
-                <p>CONTACT x MAIL US</p>
-                <a href=mailto:mbchamans@gmail.com style="color:  #ffad33;">mbchamans@gmail.com</a></p>
-       
-            <br>
-            <br>
+
+            <div class="column two">
+                <br>
+                <p style="text-align: center;color: #bc986a;">ESTIMATED PRICE</p>
+                <p id="price" style="font-size: 140px; text-align: center;"></p>
+            </div>
 
         </div>
+
+        <br><br><br>
+
+        <div class="footer">
+            <br>
+           <img src="logo.png" width="100" height="100" alt="" loading="lazy">
+            <br><br>
+            <p style="font-size: 15px;"><i>"Property Wise Be Wise"</i></p>
+            <p style="font-size: 15px;">CONTACT x MAIL US</p>
+            <a href=mailto:mbchamans@gmail.com style="color:#fbeec1">mbchamans@gmail.com</a></p>
+            <br><br>
+        </div>
+
+        <script>
+            function myFunction() {
+              document.getElementById("price").innerHTML = "RS";
+            }
+        </script>
+        
     </body>
 </html>
 
