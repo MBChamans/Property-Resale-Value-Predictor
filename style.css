@@ -68,10 +68,12 @@ input{
 .firstinput{
     width:49%;
     float: left;
+    font-size: 14px;
 }
 .secondinput{
     width:49%;
     float: right;
+    font-size: 14px;
 }
 
 .propertylist{
@@ -83,26 +85,30 @@ input{
 .floorlist{
     width:49%;
     float: left;
+    font-size: 14px;
 }
 
 .bedroomlist{
     font-size: 14px;
-    width: 36.5%;
+    width: 37.5%;
 }
 
 .floorno{
     width:49%;
     float: right; 
+    font-size: 14px;
 }
 
 .cparkingnumber{
     width:49%;
     float: left;
+    font-size: 14px;
 }
 
 .oparkingnumber{
     width:49%;
     float: right;
+    font-size: 14px;
 }
 
 .sub{
