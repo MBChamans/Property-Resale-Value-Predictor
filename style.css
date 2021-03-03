@@ -4,7 +4,7 @@
 }
 
 .navbar{
-    background: #bc986a;
+    background: #242582;
     /* border-bottom: 5px solid #fbeec1; */
 }
 
@@ -27,12 +27,12 @@
 }
 
 .nav-link{
-    color: #fbeec1;
+    color: #f64c72;
     font-size: 20px;
 }
 
 .first .nav-link:hover{
-    border-left: 5px solid #fbeec1;
+    border-left: 5px solid #f64c72;
     color:#fbeec1;
 }
 
@@ -43,102 +43,207 @@
 .column {
     float: left;
     padding: 10px;
-    height: 330px; /* Should be removed. Only for demonstration */
+    
 }
 
 .one{
     width:62%;  
 }
 
+.oo{
+    width:45%;
+}
+
+.tt{
+    margin-left: 40px;
+}
+
 .two{
     margin-left: 15px;
     width:36%;
-    border: 2px solid #808080;
+   
+}
+
+.res{
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    border: 2px solid #f64c72;
     border-radius: 20px;
+    padding-right:10px;
+    padding-left: 10px;
+    padding-top: 13px;
+    padding-bottom: 0px;
+
 }
 
 input{
     padding: 10px 20px;
     margin: 8px 0;
+    height: 55px;
     display: inline-block;
-    border: 1px solid #808080;
+    border: 1px solid #ffffff;
     border-radius: 7px;
-}
-
-.firstinput{
-    width:49%;
-    float: left;
-    font-size: 14px;
-}
-.secondinput{
-    width:49%;
-    float: right;
-    font-size: 14px;
-}
-
-.propertylist{
-    font-size: 14px;
-    width: 39%;
+    background-color: #242582;
+    color: #f64c72;
     
 }
 
-.floorlist{
-    width:49%;
+.firstinput{
+    width:100%;
     float: left;
-    font-size: 14px;
+    height: 90px;
+    font-size: 20px;
 }
+.secondinput{
+    width:100%;
+    float: left;
+     height: 70px;
+     font-size: 23px;
+}
+
+.thirdinput{
+    width:100%;
+    float: left;
+    height: 70px;
+    font-size: 23px;
+
+}
+
+
 
 .bedroomlist{
-    font-size: 14px;
-    width: 37.5%;
+ font-size: 25px;
+ width: 37.5%;
 }
 
-.floorno{
-    width:49%;
-    float: right; 
-    font-size: 14px;
-}
 
-.cparkingnumber{
+
+.parkingnumber{
     width:49%;
     float: left;
-    font-size: 14px;
+    font-size: 25px;
 }
 
-.oparkingnumber{
-    width:49%;
+.liftavail{
     float: right;
-    font-size: 14px;
+    width:49%;
+    
+    font-size: 25px;
 }
 
 .sub{
-    margin-top: 20px;
-    width:50%;
-    margin-left: 25%;
-    padding: 10px 20px;
+    margin-top: 30px;
+    margin-left: 30px;
+    width:120%;
+    color: #f64c72;
+    padding: 21px 20px;
     border-radius: 7px;
-    background-color: white;
-    border: 2px solid #bc986a;
+    background-color: #242582;
+    border: 2px solid #f64c72;
    
 }
 
 button:hover{
-    background-color: #bc986a;
-    color: #fbeec1;
+    background-color: #f64c72;
+    color: #242582;
 }
 
 input[type=text]::placeholder, input[type=NUMBER]::placeholder{
     text-align: left;
-    font-size: 14px;
+    font-size: 12px;
 }
+
+/*[type="checkbox"]
+{
+    vertical-align:middle;
+    height: 30px;
+    width: 30px;
+    color: #f64c72;
+}*/
+
+.container {
+  color: #f64c72;
+  display: inline;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  margin-left: 20px;
+  cursor: pointer;
+  font-size: 20px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* Create a custom checkbox */
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  background-color: #242582;
+  border: 1px solid #ffffff;
+  border-radius: 5px;
+  
+}
+
+/* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+  background-color: #f64c72;
+}
+
+/* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+  background-color: #f64c72;
+}
+
+/* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+
+/* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+
+/* Style the checkmark/indicator */
+.container .checkmark:after {
+  left: 9px;
+  top: 4px;
+  width: 8px;
+  height: 18px;
+  border: solid #242582;
+  border-width: 0 4px 4px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+ 
+}
+
+
 
 .footer{
     position:static;
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color:#bc986a;
-    color: #fbeec1;
+    background-color:#242582;
+    color: #f64c72;
     text-align: center;
     font-size: 12px;
 }
