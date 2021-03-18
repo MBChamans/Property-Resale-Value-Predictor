@@ -23,7 +23,7 @@
 
         <div class="row">
             <div class="column one">
-                <form action="" method="">
+                <form action='/predict' method="POST">
                 	<div class="column oo">
                 		<p style="color: #f64c72; font-size: 12px;">LOCATION</p>
                 		<input type="text" placeholder="EX: NERUL, DOMBIVALI, ETC." name="locality" class ="firstinput" required>
@@ -127,7 +127,7 @@
             </div>
             <br>
             	<p style="font-size: 40px; color:#f64c72; text-align: center;">RS.</p>
-                <p id="price" style="font-size: 80px; color:#f64c72; text-align: center;"></p>
+                <p id="price" style="font-size: 80px; color:#f64c72; text-align: center;">{{pred}}</p>
             </div>
 
         </div>
