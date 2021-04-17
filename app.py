@@ -15,6 +15,7 @@ def hello_world():
 @app.route('/predict',methods=['POST','GET'])
 def predict():
     int_features=[int(x) for x in request.form.values()]
+    print(int_features)
     final=[np.array(int_features)]
     prediction1=modelLR.predict(final)
     prediction2=modelKNN.predict(final)
