@@ -39,7 +39,6 @@ y=df_out[['Price']]
 
 x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.25, random_state=101)
 
-
 #Linear Regression
 
 lm = LinearRegression()
@@ -65,12 +64,5 @@ dt = DecisionTreeRegressor(random_state = 0)
 dt.fit(x_train, y_train)
 pickle.dump(dt,open('modelDT.pkl','wb'))
 modelDT=pickle.load(open('modelDT.pkl','rb'))
-
-mean_predictions=[]
-temp=0
-for i in range(len(x_test)):
-    temp = predictions[i]*0.1 + prediction2[i]*0.3 + prediction3[i]*0.6
-    mean_predictions.append(temp)
-    temp = 0
 
 

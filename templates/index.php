@@ -1,0 +1,173 @@
+
+<html>
+    <head>
+        <title>Mokujit Houses</title>
+        <link rel="icon" href="{{url_for('static',filename='l.png')}}">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="{{url_for('static',filename='style.css')}}">
+        <script type="text/javascript">
+        // when page is ready
+        $(document).ready(function() {
+         // on form submit
+        $("#form1").on('submit', function() {
+            // to each unchecked checkbox
+            $(this).find('input[type=checkbox]:not(:checked)').prop('checked', true).val(0);
+            })
+        })
+        </script>
+        
+    </head>
+     <body style="background-color: #242582";>
+
+        <div class="first">
+            <nav class="navbar navbar-light">
+                <a class="navbar-brand" href="#" style="color: #f64c72;"><img src="{{url_for('static',filename='l.png')}}" width="63" height="63" alt="" loading="lazy" style="margin-left: 40px; margin-right: 20px;">MOKUJIT HOUSES
+                </a>
+                <div class="right">
+                    <a class="nav-link" style="color: #f64c72; margin-right: 40px;" href="#">ABOUT</a>
+                </div>
+            </nav>
+        </div>
+
+        <div class="row">
+            <div class="column one">
+                <form action='/predict' method="POST" id="form1">
+                	<div class="column oo">
+                		<p style="color: #f64c72; font-size: 12px;">LOCATION</p>
+                		<input type="text" placeholder="EX: NERUL, DOMBIVLI, ETC." name="local" class ="firstinput" required>
+                
+                		<p style="color: #242582;">a</p>
+
+                		<p style="color: #f64c72; font-size: 12px; margin-top: 5px;">AREA</p>
+						<input type="number" placeholder="SUPER BUILT-UP AREA (SQFT)" name="area" class ="secondinput" required>	
+
+						<p style="color: #242582;">a</p>
+
+                		<p style="color: #f64c72; font-size: 12px; margin-top: 5px;">NO. OF BEDROOMS</p>
+						<input type="number" placeholder="EX: 1, 2, 3, ETC." name="noofbedr" class ="thirdinput" required>	
+                	</div>
+
+                	<div class="column tt">
+                		<p style="color: #f64c72; font-size: 12px; margin-left: 30px;">CHECK VALID DETAILS</p>
+                		<br>
+
+                		<!-- <input type="checkbox" id="parking" name="vehicle1" value="1" style="color: #f64c72;">
+						<label for="vehicle1" style="margin-left: 20px;">PARKING</label><br>
+  					
+
+  						<input type="checkbox" id="gym" name="vehicle2" value="1">
+						<label for="vehicle2">GYMNASIUM</label><br>
+
+						<input type="checkbox" id="pool" name="vehicle3" value="1">
+						<label for="vehicle3">SWIMMING POOL</label><br><br> -->
+
+						<label class="container">PARKING
+						  <!-- <input type="hidden" name="park" value="0" > -->
+                          <input type="checkbox" name="park" value="1">
+						  <span class="checkmark" style="margin-left:300px;"  ></span>
+						</label>
+						<br><br>
+						<label class="container">GYMNASIUM
+                          <!-- <input type="hidden" name="gym" value="0" >   -->
+						  <input type="checkbox" name="gym" value="1">
+						  <span class="checkmark" style="margin-left:300px;"></span>
+						</label>
+						<br><br>
+						<label class="container">SWIMMMING POOL
+                          <!-- <input type="hidden" name="swimpool" value="0" >   -->
+						  <input type="checkbox" name="swimpool" value="1">
+						  <span class="checkmark" style="margin-left:300px;"></span>
+						</label>
+						<br><br>
+						<label class="container">LIFT
+                          <!-- <input type="hidden" name="lift" value="0" >   -->
+						  <input type="checkbox" name="lift" value="1">
+						  <span class="checkmark" style="margin-left:300px;"></span>
+						</label>
+						<br><br>
+						<label class="container">RESALE
+                          <!-- <input type="hidden" name="resale" value="0" >   -->
+						  <input type="checkbox" name="resale" value="1">
+						  <span class="checkmark" style="margin-left:300px;"></span>
+						</label>
+						<br><br><br>
+						<button type="submit" class="sub">CALCULATE PRICE</button>
+						
+                	</div>
+
+                       
+                   
+
+                    <!-- <span>
+                        <input list="property" name="propertyname" placeholder="Property Type" class="propertylist">
+                            <datalist id="property">
+                                <option value="Apartment">
+                                <option value="Villa">
+                                <option value="Bungalows">
+                            </datalist>                      
+                        &nbsp;&nbsp;&nbsp;&nbsp;                                                       
+                        <span>No. Of Bedrooms :</span>
+                        &nbsp;
+                        <input type="number" placeholder="Number of Bedrooms" name="bedrooms" class ="bedroomlist" required>                           
+                    </span> -->
+
+
+
+                    <!-- <span> 
+                    	<span><p>Hello</p></span>
+                        <input type="number" placeholder="Parking" name="parking" class ="parkingnumber" required>
+                        <input type="number" placeholder="Lift" name="lift" class ="liftavail" required>
+
+                             
+                    </span> -->
+
+
+                    <!-- <span>
+                        <input type="number" placeholder="Total Floors" name="floortotal" class ="floorlist" required>
+                        <input type="number" placeholder="Floor Number" name="floornumber" class ="floorno" required>  
+                    </span> -->
+
+                    <br><br>
+
+                    
+                </form>
+            </div>
+
+            <div class="column two">
+                <br>
+                <div class="res">
+                <p style="text-align: center;color: #f64c72;">ESTIMATED PRICE</p>
+            </div>
+            <br>
+            	<p style="font-size: 40px; color:#f64c72; text-align: center;">RS.</p>
+                <p id="price" style="font-size: 80px; color:#f64c72; text-align: center;">{{pred}}</p>
+            </div>
+
+        </div>
+
+  
+        <div class="footer">
+      
+           <img src="{{url_for('static',filename='l.png')}}" width="50" height="50" alt="" loading="lazy">
+            <br><br>
+            <p style="font-size: 12px;"><i>"Property Wise Be Wise"</i></p>
+            <p style="font-size: 12px;">CONTACT x MAIL US</p>
+            <a href=mailto:mbchamans@gmail.com style="color:#f64c72">mbchamans@gmail.com</a></p>
+            <br><br>
+        </div>
+
+        <script>
+            function myFunction() {
+              document.getElementById("price").innerHTML = "999999";
+            }
+        </script>
+        
+    </body>
+</html>
+
+
+                    
